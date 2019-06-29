@@ -30,14 +30,17 @@ var beginGame = function () {
             "choice-random": random
         });
 
-        //sends to the DOM
-        crystal.html(random);
+        
+        //crystal.html(random);
 
         
         $(".crystals").append(crystal);
 
     }
+        $("#counter").html("Current Score: " + counter);
 }
+
+    
 
 //reload page
 beginGame();
@@ -49,26 +52,22 @@ $(document).on("click", ".crystal", function () {
     var num = parseInt($(this).attr('choice-random'));
     counter += num;
 
-    $("#counter").html(counter);
+    $("#counter").html("Current Score: " + counter);
 
     console.log(counter);
     if (counter > randomResult) {
-        loss--;
+        loss++;
 
-        $("#loss").html(loss);
+        $("#loss").html("You are NOT the winner: " + loss);
 
         counter = 0;
-
-        $("#counter").html(counter);
-
+        
         beginGame(); //if the "if" statement is "true" the user loses and the game resets
     }
     else if (counter === randomResult) {
         win++;
 
-        $("#win").html(win);
-
-        $("#counter").html(counter);
+        $("#win").html("Way to go, you are a WINNER: " + win);
 
         counter = 0;
 
