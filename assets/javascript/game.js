@@ -10,6 +10,13 @@ var beginGame = function () {
     //empties the crystal
     $(".crystals").empty();
 
+    var images = [
+        "https://krystal.com/wp-content/uploads/2016/01/Logo_New.png",
+        "https://media.bizj.us/view/img/11128488/unknown-2*750xx7680-4320-0-0.jpg", 
+        "https://krystal.com/wp-content/uploads/2019/03/KRYS-69414-Scrambler_Bowls_SM.jpg", 
+        "https://cdn.cltampa.com/files/base/scomm/cltampa/image/2019/06/640w/Screen_Shot_2019_06_19_at_1.21.11_PM.5d0a6f182a3af.jpg"
+    ];
+
     //generates a new random number
     randomResult = Math.floor(Math.random() * 101) + 19;
     // console.log(randomResult);
