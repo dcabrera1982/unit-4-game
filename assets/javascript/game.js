@@ -1,39 +1,80 @@
 var randomResult;
-var loss;
-var win;
+var loss = 0;
+var win = 0;
 var counter = 0;
 
 
+//starts the game - set up within a "function"
+var beginGame = function () {
 
+    //empties the crystal
+    $(".crystals").empty();
 
-randomResult = Math.floor(Math.random() * 101) + 19;
-// console.log(randomResult);
+    //generates a new random number
+    randomResult = Math.floor(Math.random() * 101) + 19;
+    // console.log(randomResult);
 
-$("#result").html("Random Result: " + randomResult);
+    //adds the random number to the DOM
+    $("#result").html("Random Result: " + randomResult);
 
-for (var i = 0; i < 4; i++) {
+    // loops 4 times, each time creating a random number
+    for (var i = 0; i < 4; i++) {
 
-    var random = Math.floor(Math.random() * 11) + 1;
-    //console.log(random);
+        var random = Math.floor(Math.random() * 11) + 1;
+        //console.log(random);
 
-    var crystal = $("<div>");
-    crystal.attr({
-        "class": 'crystal',
-        "data-random": random
-    });
+        // created "div" for the random number along with 2 attributes
+        var crystal = $("<div>");
+        crystal.attr({
+            "class": 'crystal',
+            "choice-random": random
+        });
 
-    $(".crystals").append(crystal);
+        //sends to the DOM
+        crystal.html(random);
+
+        
+        $(".crystals").append(crystal);
+
+    }
 }
 
+//reload page
+beginGame();
 
-$(".crystal").on("click", function() {
-    
-    
-    var num = parseInt($(this).attr('data-random'));
+
+$(document).on("click", ".crystal", function () {
+
+
+    var num = parseInt($(this).attr('choice-random'));
     counter += num;
 
+    $("#counter").html(counter);
+
     console.log(counter);
-    
+    if (counter > randomResult) {
+        loss--;
+
+        $("#loss").html(loss);
+
+        counter = 0;
+
+        $("#counter").html(counter);
+
+        beginGame(); //if the "if" statement is "true" the user loses and the game resets
+    }
+    else if (counter === randomResult) {
+        win++;
+
+        $("#win").html(win);
+
+        $("#counter").html(counter);
+
+        counter = 0;
+
+        beginGame(); //if the "if" statement is "false" then "else if" is "true," the user wins and the game resets
+    }
+
 });
 
 
