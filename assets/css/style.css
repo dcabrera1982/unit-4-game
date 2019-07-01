@@ -1,3 +1,22 @@
+
+
+.jumbotron{
+    margin-top: 20px;
+    background-size: cover;
+    color: white;
+    background-color: red!important;
+        
+}
+
+.display-4{
+    margin-bottom: 8%;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-style: italic;
+    text-shadow: 3px 2px black;
+}
+
 .crystals{
     display: flex;
     justify-content: space-around;
@@ -9,4 +28,25 @@
     border: 1px solid green;
     height: 200px;
     width: 200px;
+    box-shadow: 5px 5px 5px;
+    transition: 1s;
 }
+
+.crystal:hover{
+    box-shadow: 20px 20px 20px;
+    transition: 1s;
+}
+
+img {
+    width: 50px;
+}
+
+#counter{
+    font-size: 40px;
+    margin-top: 30px;
+    color: red;
+    margin-right: 75%;
+    background-color: black;
+
+}
+

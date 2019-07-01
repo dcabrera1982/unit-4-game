@@ -9,13 +9,14 @@ var beginGame = function () {
 
     //empties the crystal
     $(".crystals").empty();
-
     var images = [
-        "https://krystal.com/wp-content/uploads/2016/01/Logo_New.png",
-        "https://media.bizj.us/view/img/11128488/unknown-2*750xx7680-4320-0-0.jpg", 
-        "https://krystal.com/wp-content/uploads/2019/03/KRYS-69414-Scrambler_Bowls_SM.jpg", 
-        "https://cdn.cltampa.com/files/base/scomm/cltampa/image/2019/06/640w/Screen_Shot_2019_06_19_at_1.21.11_PM.5d0a6f182a3af.jpg"
-    ];
+        "https://fastly.4sqi.net/img/general/200x200/25195413_DukCFlLVwUByduGFX6wYh4qfiskSREUGrCw9Gc-c_nI.jpg",
+        "https://fastly.4sqi.net/img/general/200x200/1439202_O2kllp5AR-GAi57-Opbve2P56hQ-VWcr7L6WKLzqxgM.jpg",
+        "https://krystal.com/wp-content/uploads/2019/06/AYCE_496x638.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMauG0XgOelwN5vOpFmJD1Yi-YttBHS-9l9f7JQeEpgq7XYG9Qtg",
+    ]
+
+         
 
     //generates a new random number
     randomResult = Math.floor(Math.random() * 101) + 19;
@@ -24,7 +25,7 @@ var beginGame = function () {
     //adds the random number to the DOM
     $("#result").html("Random Result: " + randomResult);
 
-    // loops 4 times, each time creating a random number
+    //loops 4 times, each time creating a random number
     for (var i = 0; i < 4; i++) {
 
         var random = Math.floor(Math.random() * 11) + 1;
@@ -32,10 +33,16 @@ var beginGame = function () {
 
         // created "div" for the random number along with 2 attributes
         var crystal = $("<div>");
-        crystal.attr({
-            "class": 'crystal',
-            "choice-random": random
-        });
+            crystal.attr({
+                "class": 'crystal',
+                "choice-random": random
+            });
+            crystal.css({
+                "background-image":"url('" + images[i] + "')",
+                "background-size":"cover",
+            });
+            
+            
 
         
         //crystal.html(random);
