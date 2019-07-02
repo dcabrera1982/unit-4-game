@@ -1,10 +1,10 @@
 
 
 .jumbotron{
-    margin-top: 20px;
+    margin-top: 15px;
     background-size: cover;
-    color: white;
-    background-color: red!important;
+    color: red;
+    background-color: darkgray;
         
 }
 
@@ -12,22 +12,24 @@
     margin-bottom: 2%;
     text-align: center;
     font-style: italic;
-    text-shadow: 3px 2px black;
-    font-size: 100px;
+    text-shadow: 4px 2px black;
+    font-size: 70px;
+    font-family: 'Indie Flower', cursive;
 }
 
 h2{
     text-align: center;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    text-shadow: .5px 2px white;
 }
 
 #result{
-    font-size: 35px;
-    margin-top: 30px;
+    font-size: 23px;
+    margin-top: 20px;
     color: white;
-    margin-right: 75%;
-    background-color: black;
-    text-shadow: white;
+    text-shadow: 1px 2px black;
+    text-align: center;
 
 }
 
@@ -40,8 +42,8 @@ h2{
 
 .crystal{
     border: 1px solid green;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     box-shadow: 5px 5px 5px;
     transition: 1s;
 }
@@ -55,29 +57,20 @@ img {
     width: 50px;
 }
 
-#counter{
-    font-size: 22px;
+#counter, #win, #loss{
+    font-size: 30px;
     margin-top: 30px;
-    color: white;
-    margin-right: 75%;
-    background-color: black;
+    color: maroon;
+    font-family: 'Indie Flower', cursive;
+    padding: 2px 2px;
+    border: 10%;
+    background-color: white;
+    box-shadow: 10px 10px 10px;
+    text-align: center;
+    
 
 }
 
-#win{
-    font-size: 22px;
-    margin-top: 30px;
-    color: white;
-    margin-right: 75%;
-    background-color: black;
-}
 
-#loss{
-    font-size: 22px;
-    margin-top: 30px;
-    color: white;
-    margin-right: 75%;
-    background-color: black;
 
-}
 

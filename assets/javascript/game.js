@@ -70,7 +70,7 @@ $(document).on("click", ".crystal", function () {
     if (counter > randomResult) {
         loss++;
 
-        $("#loss").html("Loss: " + loss);
+        $("#loss").html("Losses: " + loss);
 
         counter = 0;
         
@@ -79,7 +79,7 @@ $(document).on("click", ".crystal", function () {
     else if (counter === randomResult) {
         win++;
 
-        $("#win").html("Winner: " + win);
+        $("#win").html("Wins: " + win);
 
         counter = 0;
 
