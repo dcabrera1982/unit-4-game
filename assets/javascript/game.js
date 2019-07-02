@@ -23,7 +23,7 @@ var beginGame = function () {
     // console.log(randomResult);
 
     //adds the random number to the DOM
-    $("#result").html("Random Result: " + randomResult);
+    $("#result").html("Krystal Burgers: " + randomResult);
 
     //loops 4 times, each time creating a random number
     for (var i = 0; i < 4; i++) {
@@ -42,9 +42,7 @@ var beginGame = function () {
                 "background-size":"cover",
             });
             
-            
-
-        
+                  
         //crystal.html(random);
 
         
@@ -68,11 +66,11 @@ $(document).on("click", ".crystal", function () {
 
     $("#counter").html("Current Score: " + counter);
 
-    console.log(counter);
+    //console.log(counter);
     if (counter > randomResult) {
         loss++;
 
-        $("#loss").html("You are NOT the winner: " + loss);
+        $("#loss").html("Loss: " + loss);
 
         counter = 0;
         
@@ -81,7 +79,7 @@ $(document).on("click", ".crystal", function () {
     else if (counter === randomResult) {
         win++;
 
-        $("#win").html("Way to go, you are a WINNER: " + win);
+        $("#win").html("Winner: " + win);
 
         counter = 0;
 

@@ -7,27 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Crystal Collector</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Krystal Kollector</title>
 </head>
 
 <body>
 
     <div class="jumbotron">
-        
+
         <h1 class="display-4">Krystal Kollector</h1>
+        <h2>Click the images and try to match the number of "<u>Krystal Burgers</u>".</h2>
 
         <p id="result"></p>
 
 
         <div class="crystals"></div>
 
+        <section>
+            <div class="row">
 
-        <p id="counter"> </p>
-        <p id="win"> </p>
-        <p id="loss"> </p>
+                <div class="col">
+                    <div class="wall">
+                        <p id="win"> </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="largeWall">
+                        <p id="counter"> </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="wall">
+                        <p id="loss"> </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <hr class="my-4">
 
